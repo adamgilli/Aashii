@@ -19,5 +19,7 @@ CREATE TABLE IF NOT EXISTS from_users (
 
 CREATE TABLE IF NOT EXISTS invite_links (
     user_id BIGINT REFERENCES users,
-    message_id INTEGER NOT NULL
+    message_id INTEGER NOT NULL,
+    links_count INTEGER NOT NULL DEFAULT 1,
+    pending BOOL NOT NULL DEFAULT FALSE
 );
